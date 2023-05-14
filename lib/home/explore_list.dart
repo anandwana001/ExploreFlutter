@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../button/button_list.dart';
+import '../movies/movies.dart';
 import '../text/text_list.dart';
 
 class ExploreList extends StatefulWidget {
@@ -11,7 +12,7 @@ class ExploreList extends StatefulWidget {
 }
 
 class ExploreListState extends State<ExploreList> {
-  final List<String> entries = <String>['Text', 'Buttons',];
+  final List<String> entries = <String>['Text', 'Buttons', 'Networking'];
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +25,7 @@ class ExploreListState extends State<ExploreList> {
           return Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Text(
+              const Text(
                 'More Views Coming Soon',
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
               ),
@@ -46,6 +47,7 @@ class ExploreListState extends State<ExploreList> {
             switch(index) {
               case 0: return const TextList();
               case 1: return const ButtonList();
+              case 2: return const Movies();
             }
             return const TextList();
           },
