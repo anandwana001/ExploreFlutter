@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'home/explore_list.dart';
+import 'ui/home/explore_list.dart';
 
 void main() {
   runApp(MaterialApp(
