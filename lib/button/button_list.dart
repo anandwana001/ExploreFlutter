@@ -1,15 +1,8 @@
 import 'package:flutter/material.dart';
 
-class ButtonList extends StatefulWidget {
+class ButtonList extends StatelessWidget {
   const ButtonList({super.key});
 
-  @override
-  State<StatefulWidget> createState() => ButtonListState();
-}
-
-enum ButtonTypes { ELEVATE_BUTTON, FILLED_BUTTON, OUTLINED_BUTTON }
-
-class ButtonListState extends State<ButtonList> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,7 +27,7 @@ class ButtonListState extends State<ButtonList> {
         return ElevatedButton(
           onPressed: () {},
           style: ElevatedButton.styleFrom(
-    backgroundColor: Colors.greenAccent,
+              backgroundColor: Colors.greenAccent,
               textStyle: const TextStyle(fontSize: 20)),
           child: const Text('ElevatedButton'),
         );
@@ -49,11 +42,13 @@ class ButtonListState extends State<ButtonList> {
         return FilledButton(
           onPressed: () {},
           style:
-              FilledButton.styleFrom(
-                  backgroundColor: Colors.purpleAccent,
-                  textStyle: const TextStyle(fontSize: 20)),
+          FilledButton.styleFrom(
+              backgroundColor: Colors.purpleAccent,
+              textStyle: const TextStyle(fontSize: 20)),
           child: const Text('FilledButton'),
         );
     }
   }
 }
+
+enum ButtonTypes { ELEVATE_BUTTON, FILLED_BUTTON, OUTLINED_BUTTON }

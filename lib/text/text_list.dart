@@ -1,22 +1,14 @@
 
 import 'package:flutter/material.dart';
 
-class TextList extends StatefulWidget {
+class TextList extends StatelessWidget {
   const TextList({super.key});
 
-  @override
-  State<StatefulWidget> createState() => TextListState();
-}
 
-enum TextTypes {
-  BASIC_TEXT,
-  RICH_TEXT,
-}
 
-class TextListState extends State<TextList> {
   @override
   Widget build(BuildContext context) {
-     return Scaffold(
+    return Scaffold(
       appBar: AppBar(
         title: const Text('Text'),
       ),
@@ -37,16 +29,21 @@ class TextListState extends State<TextList> {
       case TextTypes.BASIC_TEXT:
         return const Text('This is a basic text with all flutter default configuration');
       case TextTypes.RICH_TEXT:
-       return const Text('Modified Text',
+        return const Text('Modified Text',
 
-         style: TextStyle(fontWeight: FontWeight.bold,
-             fontSize: 20,
-             color: Colors.deepOrangeAccent,
-             backgroundColor: Colors.greenAccent,
-             letterSpacing: 10,
+          style: TextStyle(fontWeight: FontWeight.bold,
+            fontSize: 20,
+            color: Colors.deepOrangeAccent,
+            backgroundColor: Colors.greenAccent,
+            letterSpacing: 10,
 
-         ),
-       );
+          ),
+        );
     }
   }
+}
+
+enum TextTypes {
+  BASIC_TEXT,
+  RICH_TEXT,
 }
