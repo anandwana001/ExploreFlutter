@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../bottombar/bottom_bar.dart';
 import '../button/button_list.dart';
 import '../movies/movies.dart';
 import '../text/text_list.dart';
@@ -12,7 +13,7 @@ class ExploreList extends StatefulWidget {
 }
 
 class ExploreListState extends State<ExploreList> {
-  final List<String> entries = <String>['Text', 'Buttons', 'Networking'];
+  final List<String> entries = <String>['Text', 'Buttons', 'Networking', 'Bottom Bar'];
 
   @override
   Widget build(BuildContext context) {
@@ -48,6 +49,7 @@ class ExploreListState extends State<ExploreList> {
               case 0: return const TextList();
               case 1: return const ButtonList();
               case 2: return const Movies();
+              case 3: return const BottomNavigationBarList();
             }
             return const TextList();
           },
